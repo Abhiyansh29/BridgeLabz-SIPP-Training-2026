@@ -1,0 +1,41 @@
+SELECT * FROM covid.`covid_19_india - covid_19_india`;
+-- delete second entry 
+ -- add one row 
+ -- update one row
+ 
+ SET SQL_SAFE_UPDATES = 0;
+ DELETE FROM covid.`covid_19_india - covid_19_india`
+WHERE Sno = 2;
+
+
+INSERT INTO covid.`covid_19_india - covid_19_india`
+(
+    Sno,
+    Date,
+    Time,
+    `State/UnionTerritory`,
+    ConfirmedIndianNational,
+    ConfirmedForeignNational,
+    Cured,
+    Deaths,
+    Confirmed
+)
+VALUES
+(
+    1002,
+    '24/06/2026',
+    '10:00 AM',
+    'Test State',
+    '0',
+    '0',
+    100,
+    5,
+    105
+);
+
+
+UPDATE covid.`covid_19_india - covid_19_india`
+SET
+    `State/UnionTerritory` = 'Updated State',
+    Confirmed = 50
+WHERE Sno = 1;
